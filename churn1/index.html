@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>churn</title>
+    
+</head>
+
+<body>
+<div>
+    <h2>Formulaire de données client</h2>
+    <form action="/submit" method="post">
+        <label for="RowNumber">RowNumber:</label>
+        <input type="number" id="RowNumber" name="RowNumber" placeholder="Enter your RowNumber"><br><br>
+
+
+        <label for="CreditScore">CreditScore:</label>
+        <input type="number" id="CreditScore" name="CreditScore" placeholder="Enter your CreditScore"><br><br>
+
+        <label for="Geography">Geography:</label><br>
+        <input type="radio" id="France" name="Geography" value="France">
+        <label for="France">France</label><br>
+        <input type="radio" id="Germany" name="Geography" value="Germany">
+        <label for="Germany">Germany</label><br>
+        <input type="radio" id="Spain" name="Geography" value="Spain">
+        <label for="Spain">Spain</label><br><br>
+
+        <label for="Gender">Gender:</label><br>
+        <input type="radio" id="Female" name="Gender" value="Female">
+        <label for="Female">Female</label><br>
+        <input type="radio" id="Male" name="Gender" value="Male">
+        <label for="Male">Male</label><br><br>
+
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" placeholder="Enter your Age"><br><br>
+
+        <label for="Tenure">Tenure:</label>
+        <input type="number" id="Tenure" name="Tenure" placeholder="Enter your Tenure"><br><br>
+
+        <label for="Balance">Balance:</label>
+        <input type="number" id="Balance" name="Balance" placeholder="Enter your Balance"><br><br>
+
+        <label for="NumOfProducts">NumOfProducts:</label>
+        <input type="number" id="NumOfProducts" name="NumOfProducts" placeholder="Enter your NumOfProducts"><br><br>
+
+        <label for="HasCrCard">HasCrCard:</label><br>
+        <input type="radio" id="True" name="HasCrCard" value="True">
+        <label for="True">True</label><br>
+        <input type="radio" id="False" name="HasCrCard" value="False">
+        <label for="False">False</label><br><br>
+
+        <label for="IsActiveMember">IsActiveMember:</label><br>
+        <input type="radio" id="True" name="IsActiveMember" value="True">
+        <label for="True">True</label><br>
+        <input type="radio" id="False" name="IsActiveMember" value="False">
+        <label for="False">False</label><br><br>
+
+        <label for="EstimatedSalary">EstimatedSalary:</label>
+        <input type="number" id="EstimatedSalary" name="EstimatedSalary" placeholder="Enter your EstimatedSalary"><br><br>
+
+        <label for="balance_salary_ratio">balance_salary_ratio:</label>
+        <input type="number" id="balance_salary_ratio" name="balance_salary_ratio" placeholder="Enter your balance_salary_ratio"><br><br>
+
+        <label for="tenure_age_ratio">tenure_age_ratio:</label>
+        <input type="number" id="tenure_age_ratio" name="tenure_age_ratio" placeholder="Enter your tenure_age_ratio"><br><br>
+
+        <input type="submit" value="Soumettre">
+    </form>
+    {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+    
+</body>
+</html>
